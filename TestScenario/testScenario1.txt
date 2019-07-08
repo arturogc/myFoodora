@@ -1,0 +1,92 @@
+login "manager" "ceo" "123456789"
+registerRestaurant "Bonheur Antony" "2,7" "bonheur" "chinoise"
+registerRestaurant "Burger Lobby" "-2,1" "BL" "burgerlover"
+registerCustomer "Dominique" "Wilkins" "DW21" "1,0" "dunk"
+registerCustomer "Steve" "Nash" "stevenash" "-2,2" "phoenix"
+registerCourier "Jason" "Kidd" "jkidd" "-1,-1" "njnets"
+registerCourier "Pau" "Gasol" "gasol10" "2,1" "skyhook"
+showRestaurantTop
+showCustomers
+setDeliveryPolicy "FastestDelivery"
+associateCard "DW21" "LotteryFidelityCard"
+logout
+login "restaurant" "bonheur" "chinoise"
+addDishRestaurantMenu "Soup" "Starter" "GlutenFree" "4.5"
+addDishRestaurantMenu "Chop suey" "Main" "Standard" "7"
+addDishRestaurantMenu "Springrolls" "Main" "Standard" "6"
+addDishRestaurantMenu "Chocolate Cake" "Dessert" "Vegetarian" "3.5"
+createMeal "Pekinese lunch" "Standard" "Full"
+addDish2Meal "Soup" "Pekinese lunch"
+addDish2Meal "Chop suey" "Pekinese lunch"
+addDish2Meal "Chocolate Cake" "Pekinese lunch"
+saveMeal "Pekinese lunch"
+setSpecialOffer "Pekinese lunch"
+showMeal "Pekinese lunch"
+logout
+login "customer" "stevenash" "phoenix"
+setConsensus "true"
+setCustomerInfo "0782683562" "steve.nash@nba.com"
+logout
+login "restaurant" "BL" "burgerlover"
+addDishRestaurantMenu "Salad" "Starter" "Vegetarian" "3.5"
+addDishRestaurantMenu "Chips" "Starter" "Standard" "2"
+addDishRestaurantMenu "Beef burger" "Main" "Standard" "8"
+addDishRestaurantMenu "Fruit mix" "Dessert" "Vegetarian" "4.5"
+createMeal "Burger lovers" "Standard" "Half"
+addDish2Meal "Chips" "Burger lovers"
+addDish2Meal "Beef burger" "Burger lovers"
+saveMeal "Burger lovers"
+setSpecialOffer "Burger lovers"
+createMeal "Burger lovers XL" "Standard" "Full"
+addDish2Meal "Chips" "Burger lovers XL"
+addDish2Meal "Beef burger" "Burger lovers XL"
+addDish2Meal "Fruit mix" "Burger lovers XL"
+saveMeal "Burger lovers XL"
+setSpecialOffer "Burger lovers XL"
+removeFromSpecialOffer "Burger lovers"
+logout
+login "manager" "ceo" "123456789"
+showMenuItem "Bonheur Antony"
+showMenuItem "Burger Lobby"
+logout
+login "customer" "DW21" "dunk"
+createOrder "Bonheur Antony" "Friday dinner"
+addItem2Order "Friday dinner" "Pekinese lunch"
+addItem2Order "Friday dinner" "Springrolls"
+endOrder "Friday dinner" "27/12/2016"
+logout
+findDeliverer "Friday dinner"
+login "courier" "gasol10" "skyhook"
+offDuty "gasol10"
+logout
+findDeliverer "Friday dinner"
+login "courier" "gasol10" "skyhook"
+onDuty "gasol10"
+logout
+login "customer" "stevenash" "phoenix"
+createOrder "Burger Lobby" "Netflix and chill"
+addItem2Order "Netflix and chill" "Burger lovers"
+addItem2Order "Netflix and chill" "Salad"
+addItem2Order "Netflix and chill" "Fruit mix"
+endOrder "Netflix and chill" "20/08/2016"
+logout
+login "customer" "stevenash" "phoenix"
+createOrder "Bonheur Antony" "Lunch with friends"
+addItem2Order "Lunch with friends" "Pekinese lunch"
+addItem2Order "Lunch with friends" "Pekinese lunch"
+addItem2Order "Lunch with friends" "Pekinese lunch"
+addItem2Order "Lunch with friends" "Springrolls"
+addItem2Order "Lunch with friends" "Chocolate Cake"
+addItem2Order "Lunch with friends" "Chocolate Cake"
+addItem2Order "Lunch with friends" "Chocolate Cake"
+endOrder "Lunch with friends" "02/09/2016"
+logout
+login "manager" "ceo" "123456789"
+showTotalProfit
+showTotalProfit "21/09/2016" "01/01/2017"
+setProfitPolicy "TargetProfitDeliveryCost" "20"
+showCourierDeliveries
+showCustomers
+showRestaurantTop
+logout
+exit
